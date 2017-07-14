@@ -152,7 +152,7 @@ public class VdmDesktopManager : MonoBehaviour
     {
         public int dx;
         public int dy;
-        public uint mouseData;
+        public int mouseData;
         public MouseEventFlags dwFlags;
         public uint time;
         public IntPtr dwExtraInfo;
@@ -391,7 +391,6 @@ public class VdmDesktopManager : MonoBehaviour
         mouseDownInput.type = SendInputEventType.InputMouse;
         mouseDownInput.mkhi.mi.dwFlags = MouseEventFlags.MOUSEEVENTF_RIGHTDOWN;
         SendInput(1, ref mouseDownInput, Marshal.SizeOf(new INPUT()));
-
     }
 
     public void SimulateMouseRightUp()
@@ -400,6 +399,19 @@ public class VdmDesktopManager : MonoBehaviour
         mouseUpInput.type = SendInputEventType.InputMouse;
         mouseUpInput.mkhi.mi.dwFlags = MouseEventFlags.MOUSEEVENTF_RIGHTUP;
         SendInput(1, ref mouseUpInput, Marshal.SizeOf(new INPUT()));
+    }
+
+    public void SimulateMouseWheel(float movement)
+    {
+        INPUT mouseWheelInput = new INPUT();
+        mouseWheelInput.type = SendInputEventType.InputMouse;
+        mouseWheelInput.mkhi.mi.dwFlags = MouseEventFlags.MOUSEEVENTF_WHEEL;
+        mouseWheelInput.mkhi.mi.dx = 0;
+        mouseWheelInput.mkhi.mi.dy = 0;
+        mouseWheelInput.mkhi.mi.time = 0;
+        mouseWheelInput.mkhi.mi.dwExtraInfo = System.IntPtr.Zero;
+        mouseWheelInput.mkhi.mi.mouseData = (int)(movement * 20);
+        SendInput(1, ref mouseWheelInput, Marshal.SizeOf(new INPUT()));
     }
 
     public void SimulateKey(char letter)

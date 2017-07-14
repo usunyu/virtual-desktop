@@ -5,6 +5,9 @@ using System;
 using System.Collections;
 using System.Runtime.InteropServices;
 using System.Xml;
+#if VDM_SteamVR
+using Valve.VR;
+#endif
 
 public class VdmDesktop : MonoBehaviour
 {
@@ -368,6 +371,19 @@ public class VdmDesktop : MonoBehaviour
                     }
                 }
 
+                // Check touchpad swipe and simulate mouse scroll
+                // If finger is on touchpad
+                if (input.GetTouch(SteamVR_Controller.ButtonMask.Touchpad))
+                {
+                    // Read the touchpad values
+                    Vector2 touchpad = input.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);
+                    // Handle movement via touchpad
+                    if (touchpad.y > 0.2f || touchpad.y < -0.2f)
+                    {
+                        m_manager.SimulateMouseWheel(touchpad.y);
+                        VdmDesktopManager.ActionInThisFrame = true;
+                    }
+                }
             }
         }
 
