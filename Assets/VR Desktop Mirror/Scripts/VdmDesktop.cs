@@ -373,7 +373,7 @@ public class VdmDesktop : MonoBehaviour
 
                 // Check touchpad swipe and simulate mouse scroll
                 // If finger is on touchpad
-                if (input.GetTouch(SteamVR_Controller.ButtonMask.Touchpad))
+                if (hitScreen && input.GetTouch(SteamVR_Controller.ButtonMask.Touchpad))
                 {
                     // Read the touchpad values
                     Vector2 touchpad = input.GetAxis(EVRButtonId.k_EButton_SteamVR_Touchpad);

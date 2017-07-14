@@ -1,0 +1,384 @@
+fileFormatVersion: 2
+guid: ef69f87bec8453d4da50dee039a84d26
+timeCreated: 1474323455
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ceiling
+    100002: Edge
+    100004: Floor
+    100006: Frames
+    100008: //RootNode
+    100010: Object
+    100012: Object004
+    100014: Object010
+    100016: Object012
+    100018: Object014
+    100020: Object016
+    100022: Object017
+    100024: Object018
+    100026: Object019
+    100028: Plane002
+    100030: Stair
+    100032: Travi
+    100034: Vetri Ext
+    100036: Vetri Ext 1
+    100038: Vetri Ext 2
+    100040: Vetri Ext 3
+    100042: Vetri Int
+    100044: Vetri Int 1
+    100046: Vetri Int 10
+    100048: Vetri Int 11
+    100050: Vetri Int 12
+    100052: Vetri Int 13
+    100054: Vetri Int 14
+    100056: Vetri Int 15
+    100058: Vetri Int 16
+    100060: Vetri Int 17
+    100062: Vetri Int 18
+    100064: Vetri Int 19
+    100066: Vetri Int 2
+    100068: Vetri Int 20
+    100070: Vetri Int 21
+    100072: Vetri Int 22
+    100074: Vetri Int 23
+    100076: Vetri Int 24
+    100078: Vetri Int 25
+    100080: Vetri Int 26
+    100082: Vetri Int 27
+    100084: Vetri Int 28
+    100086: Vetri Int 29
+    100088: Vetri Int 3
+    100090: Vetri Int 4
+    100092: Vetri Int 5
+    100094: Vetri Int 6
+    100096: Vetri Int 7
+    100098: Vetri Int 8
+    100100: Vetri Int 9
+    100102: Bottom
+    100104: Ceiling 1
+    100106: Floor 1
+    100108: Floor 2
+    100110: Frame
+    100112: Frame 1
+    100114: Frame 2
+    100116: Vetri EXt
+    100118: Vetri_Ext
+    100120: Vetri_Int
+    100122: Group_141
+    100124: Plane001
+    400000: Ceiling
+    400002: Edge
+    400004: Floor
+    400006: Frames
+    400008: //RootNode
+    400010: Object
+    400012: Object004
+    400014: Object010
+    400016: Object012
+    400018: Object014
+    400020: Object016
+    400022: Object017
+    400024: Object018
+    400026: Object019
+    400028: Plane002
+    400030: Stair
+    400032: Travi
+    400034: Vetri Ext
+    400036: Vetri Ext 1
+    400038: Vetri Ext 2
+    400040: Vetri Ext 3
+    400042: Vetri Int
+    400044: Vetri Int 1
+    400046: Vetri Int 10
+    400048: Vetri Int 11
+    400050: Vetri Int 12
+    400052: Vetri Int 13
+    400054: Vetri Int 14
+    400056: Vetri Int 15
+    400058: Vetri Int 16
+    400060: Vetri Int 17
+    400062: Vetri Int 18
+    400064: Vetri Int 19
+    400066: Vetri Int 2
+    400068: Vetri Int 20
+    400070: Vetri Int 21
+    400072: Vetri Int 22
+    400074: Vetri Int 23
+    400076: Vetri Int 24
+    400078: Vetri Int 25
+    400080: Vetri Int 26
+    400082: Vetri Int 27
+    400084: Vetri Int 28
+    400086: Vetri Int 29
+    400088: Vetri Int 3
+    400090: Vetri Int 4
+    400092: Vetri Int 5
+    400094: Vetri Int 6
+    400096: Vetri Int 7
+    400098: Vetri Int 8
+    400100: Vetri Int 9
+    400102: Bottom
+    400104: Ceiling 1
+    400106: Floor 1
+    400108: Floor 2
+    400110: Frame
+    400112: Frame 1
+    400114: Frame 2
+    400116: Vetri EXt
+    400118: Vetri_Ext
+    400120: Vetri_Int
+    400122: Group_141
+    400124: Plane001
+    2300000: Ceiling
+    2300002: Edge
+    2300004: Floor
+    2300006: Frames
+    2300008: Object
+    2300010: Object004
+    2300012: Object010
+    2300014: Object012
+    2300016: Object014
+    2300018: Object016
+    2300020: Object017
+    2300022: Object018
+    2300024: Object019
+    2300026: Plane002
+    2300028: Stair
+    2300030: Travi
+    2300032: Vetri Ext
+    2300034: Vetri Ext 1
+    2300036: Vetri Ext 2
+    2300038: Vetri Ext 3
+    2300040: Vetri Int
+    2300042: Vetri Int 1
+    2300044: Vetri Int 10
+    2300046: Vetri Int 11
+    2300048: Vetri Int 12
+    2300050: Vetri Int 13
+    2300052: Vetri Int 14
+    2300054: Vetri Int 15
+    2300056: Vetri Int 16
+    2300058: Vetri Int 17
+    2300060: Vetri Int 18
+    2300062: Vetri Int 19
+    2300064: Vetri Int 2
+    2300066: Vetri Int 20
+    2300068: Vetri Int 21
+    2300070: Vetri Int 22
+    2300072: Vetri Int 23
+    2300074: Vetri Int 24
+    2300076: Vetri Int 25
+    2300078: Vetri Int 26
+    2300080: Vetri Int 27
+    2300082: Vetri Int 28
+    2300084: Vetri Int 29
+    2300086: Vetri Int 3
+    2300088: Vetri Int 4
+    2300090: Vetri Int 5
+    2300092: Vetri Int 6
+    2300094: Vetri Int 7
+    2300096: Vetri Int 8
+    2300098: Vetri Int 9
+    2300100: Bottom
+    2300102: Ceiling 1
+    2300104: Floor 1
+    2300106: Floor 2
+    2300108: Frame
+    2300110: Frame 1
+    2300112: Frame 2
+    2300114: Vetri EXt
+    2300116: Vetri_Ext
+    2300118: Vetri_Int
+    2300120: Group_141
+    2300122: Plane001
+    3300000: Ceiling
+    3300002: Edge
+    3300004: Floor
+    3300006: Frames
+    3300008: Object
+    3300010: Object004
+    3300012: Object010
+    3300014: Object012
+    3300016: Object014
+    3300018: Object016
+    3300020: Object017
+    3300022: Object018
+    3300024: Object019
+    3300026: Plane002
+    3300028: Stair
+    3300030: Travi
+    3300032: Vetri Ext
+    3300034: Vetri Ext 1
+    3300036: Vetri Ext 2
+    3300038: Vetri Ext 3
+    3300040: Vetri Int
+    3300042: Vetri Int 1
+    3300044: Vetri Int 10
+    3300046: Vetri Int 11
+    3300048: Vetri Int 12
+    3300050: Vetri Int 13
+    3300052: Vetri Int 14
+    3300054: Vetri Int 15
+    3300056: Vetri Int 16
+    3300058: Vetri Int 17
+    3300060: Vetri Int 18
+    3300062: Vetri Int 19
+    3300064: Vetri Int 2
+    3300066: Vetri Int 20
+    3300068: Vetri Int 21
+    3300070: Vetri Int 22
+    3300072: Vetri Int 23
+    3300074: Vetri Int 24
+    3300076: Vetri Int 25
+    3300078: Vetri Int 26
+    3300080: Vetri Int 27
+    3300082: Vetri Int 28
+    3300084: Vetri Int 29
+    3300086: Vetri Int 3
+    3300088: Vetri Int 4
+    3300090: Vetri Int 5
+    3300092: Vetri Int 6
+    3300094: Vetri Int 7
+    3300096: Vetri Int 8
+    3300098: Vetri Int 9
+    3300100: Bottom
+    3300102: Ceiling 1
+    3300104: Floor 1
+    3300106: Floor 2
+    3300108: Frame
+    3300110: Frame 1
+    3300112: Frame 2
+    3300114: Vetri EXt
+    3300116: Vetri_Ext
+    3300118: Vetri_Int
+    3300120: Group_141
+    3300122: Plane001
+    4300000: Travi
+    4300002: Frames
+    4300004: Ceiling
+    4300006: Edge
+    4300008: Vetri Ext
+    4300010: Object
+    4300012: Vetri Int
+    4300014: Stair
+    4300016: Vetri Ext
+    4300018: Vetri Ext
+    4300020: Vetri Ext
+    4300022: Vetri Int
+    4300024: Vetri Int
+    4300026: Vetri Int
+    4300028: Floor
+    4300030: Vetri Int
+    4300032: Vetri Int
+    4300034: Vetri Int
+    4300036: Vetri Int
+    4300038: Vetri Int
+    4300040: Vetri Int
+    4300042: Vetri Int
+    4300044: Vetri Int
+    4300046: Vetri Int
+    4300048: Vetri Int
+    4300050: Vetri Int
+    4300052: Vetri Int
+    4300054: Vetri Int
+    4300056: Vetri Int
+    4300058: Vetri Int
+    4300060: Vetri Int
+    4300062: Vetri Int
+    4300064: Vetri Int
+    4300066: Vetri Int
+    4300068: Vetri Int
+    4300070: Vetri Int
+    4300072: Vetri Int
+    4300074: Vetri Int
+    4300076: Vetri Int
+    4300078: Vetri Int
+    4300080: Vetri Int
+    4300082: Plane002
+    4300084: Object010
+    4300086: Object012
+    4300088: Object014
+    4300090: Object016
+    4300092: Object017
+    4300094: Object004
+    4300096: Object018
+    4300098: Object019
+    4300100: Frame
+    4300102: Bottom
+    4300104: Frame
+    4300106: Frame
+    4300108: Vetri EXt
+    4300110: Vetri_Ext
+    4300112: Vetri_Int
+    4300114: Floor
+    4300116: Ceiling
+    4300118: Floor
+    4300120: Group_141
+    4300122: Plane001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
