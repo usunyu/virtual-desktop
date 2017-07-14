@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using WindowsInput;
 
 public class VdmDesktopManager : MonoBehaviour
 {
@@ -399,6 +400,11 @@ public class VdmDesktopManager : MonoBehaviour
         mouseUpInput.type = SendInputEventType.InputMouse;
         mouseUpInput.mkhi.mi.dwFlags = MouseEventFlags.MOUSEEVENTF_RIGHTUP;
         SendInput(1, ref mouseUpInput, Marshal.SizeOf(new INPUT()));
+    }
+
+    public void SimulateKey(char letter)
+    {
+        InputSimulator.SimulateKeyPress((VirtualKeyCode)(int)Char.ToUpper(letter));
     }
 
     IEnumerator OnRender()

@@ -29,7 +29,7 @@ public class VdmDesktop : MonoBehaviour
         RIGHTDOWN = 0x00000008,
         RIGHTUP = 0x00000010
     }
-    
+
     private VdmDesktopManager m_manager;
     private LineRenderer m_line;
     private Renderer m_renderer;
@@ -51,9 +51,9 @@ public class VdmDesktop : MonoBehaviour
     private Quaternion m_rotationNormal;
     private Vector3 m_positionZoomed;
     private Quaternion m_rotationZoomed;
-    
+
     private float m_positionAnimationStart = 0;
-    
+
     // Keyboard and Mouse
     private float m_lastShowClickStart = 0;
 
@@ -76,8 +76,8 @@ public class VdmDesktop : MonoBehaviour
             skip = true;
         if ((m_controllerAttach) && (m_zoom == false))
             skip = true;
-        if(skip == false)    
-        {   
+        if (skip == false)
+        {
             float step = 0;
             if (Time.time - m_positionAnimationStart > 1)
                 step = 1;
@@ -103,11 +103,11 @@ public class VdmDesktop : MonoBehaviour
 
             if (transform.rotation != rotationDestination)
                 transform.rotation = Quaternion.Lerp(transform.rotation, rotationDestination, step);
-            
+
         }
-        
+
     }
-    
+
     void OnEnable()
     {
     }
@@ -133,7 +133,7 @@ public class VdmDesktop : MonoBehaviour
         m_renderer.enabled = true;
         m_collider.enabled = true;
 
-        if(m_manager.EnableHackUnityBug)
+        if (m_manager.EnableHackUnityBug)
         {
             m_manager.HackStart();
         }
@@ -158,7 +158,7 @@ public class VdmDesktop : MonoBehaviour
                 m_lastShowClickStart -= 10; // Avoid quick show/close
             }
         }
-         
+
         if (Input.GetKey(m_manager.KeyboardShow))
         {
             VdmDesktopManager.ActionInThisFrame = true;
@@ -168,7 +168,7 @@ public class VdmDesktop : MonoBehaviour
 
             m_positionNormal = Camera.main.transform.position + Camera.main.transform.rotation * new Vector3(0, 0, m_manager.KeyboardDistance);
             m_positionNormal += m_manager.MultiMonitorPositionOffset * ScreenIndex;
-            m_rotationNormal = Camera.main.transform.rotation;            
+            m_rotationNormal = Camera.main.transform.rotation;
         }
 
         if (Input.GetKeyUp(m_manager.KeyboardShow))
@@ -181,7 +181,7 @@ public class VdmDesktop : MonoBehaviour
 
                 Hide();
             }
-            
+
         }
 
         if (m_manager.KeyboardZoom != KeyCode.None)
@@ -197,7 +197,7 @@ public class VdmDesktop : MonoBehaviour
                     ZoomOut();
             }
 
-            if( (m_zoom) && (m_zoomWithFollowCursor) )
+            if ((m_zoom) && (m_zoomWithFollowCursor))
             {
                 VdmDesktopManager.ActionInThisFrame = true;
 
@@ -212,16 +212,16 @@ public class VdmDesktop : MonoBehaviour
                 cursorPos.x = cursorPos.x - 0.5f;
                 cursorPos.y = cursorPos.y - 0.5f;
                 cursorPos = transform.TransformPoint(cursorPos);
-                
+
                 Vector3 deltaCursor = transform.position - cursorPos;
-                
+
                 m_positionZoomed = Camera.main.transform.position + Camera.main.transform.rotation * new Vector3(0, 0, m_manager.KeyboardZoomDistance);
                 m_positionZoomed += m_manager.MultiMonitorPositionOffset * ScreenIndex;
                 m_rotationZoomed = Camera.main.transform.rotation;
 
                 m_positionZoomed += deltaCursor;
             }
-            
+
         }
     }
 
@@ -229,19 +229,19 @@ public class VdmDesktop : MonoBehaviour
     public void CheckController(SteamVR_TrackedObject controller)
     {
         SteamVR_Controller.Device input = null;
-        if(controller != null)
+        if (controller != null)
             input = SteamVR_Controller.Input((int)controller.index);
 
         Vector3 origin;
         Vector3 direction;
         Quaternion rotation;
-        
+
         origin = controller.transform.position;
         direction = controller.transform.rotation * new Vector3(0, 0, 100);
-        rotation = controller.transform.rotation;            
-            
+        rotation = controller.transform.rotation;
+
         bool hitScreen = false;
-        
+
         // Mouse simulation
         if (Visible())
         {
@@ -284,9 +284,9 @@ public class VdmDesktop : MonoBehaviour
                 if (m_lastShowClick == 0)
                 {
                     //if (m_manager.EnableZoom)
-                    if(m_manager.ViveZoom != VdmDesktopManager.ViveButton.None)
+                    if (m_manager.ViveZoom != VdmDesktopManager.ViveButton.None)
                     {
-                        if(input.GetPressDown(MyButtonToViveButton(m_manager.ViveZoom)))
+                        if (input.GetPressDown(MyButtonToViveButton(m_manager.ViveZoom)))
                         {
                             VdmDesktopManager.ActionInThisFrame = true;
 
@@ -295,7 +295,7 @@ public class VdmDesktop : MonoBehaviour
                             float distanceDelta = m_distanceBeforeZoom - m_manager.ControllerZoomDistance;
 
                             Vector3 vectorMove = rotation * new Vector3(0, 0, -distanceDelta);
-                            
+
                             m_positionZoomed = m_positionNormal + vectorMove;
                             m_rotationZoomed = m_rotationNormal;
 
@@ -331,7 +331,7 @@ public class VdmDesktop : MonoBehaviour
                         }
                     }
                 }
-    
+
                 if (m_manager.ViveTouchPadForClick)
                 {
                     if (input.GetPressDown(SteamVR_Controller.ButtonMask.Touchpad) && (input.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0).x < -0.2f))
@@ -367,23 +367,23 @@ public class VdmDesktop : MonoBehaviour
                         VdmDesktopManager.ActionInThisFrame = true;
                     }
                 }
-                
+
             }
         }
-        
-        
-        if( (Visible() == false) || (hitScreen) )
+
+
+        if ((Visible() == false) || (hitScreen))
         {
             if (input.GetPressDown(MyButtonToViveButton(m_manager.ViveShow)))
             {
                 if (m_lastShowClick == 0)
                 {
                     VdmDesktopManager.ActionInThisFrame = true;
-                    
-                    if(hitScreen == false)
+
+                    if (hitScreen == false)
                     {
                         Show();
-                        
+
                         // Don't set m_positionNormal.
                         Vector3 startDistance = controller.transform.rotation * new Vector3(0, 0, m_manager.ControllerZoomDistance);
                         transform.position = controller.transform.position + startDistance;
@@ -392,7 +392,7 @@ public class VdmDesktop : MonoBehaviour
                         m_lastShowClick = Time.time - 10;
                     }
                     else
-                        m_lastShowClick = Time.time;                    
+                        m_lastShowClick = Time.time;
                     transform.SetParent(controller.transform);
                     m_controllerAttach = true;
                 }
@@ -440,10 +440,10 @@ public class VdmDesktop : MonoBehaviour
     public void ZoomOut()
     {
         m_positionAnimationStart = Time.time;
-        
+
         m_zoom = false;
     }
-    
+
     public void ReInit(Texture2D tex, int width, int height)
     {
         GetComponent<Renderer>().material.mainTexture = tex;
@@ -455,7 +455,7 @@ public class VdmDesktop : MonoBehaviour
         sx = sx * m_manager.ScreenScaleFactor;
         sy = sy * m_manager.ScreenScaleFactor;
         transform.localScale = new Vector3(sx, sy, 1);
-        
+
     }
-    
+
 }
