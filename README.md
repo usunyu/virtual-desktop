@@ -7,4 +7,4 @@ Desktop in Virtual Reality
 * VR Desktop Mirror Source: https://github.com/Clodo76/vr-desktop-mirror
 
 #### Demo:
-[![ARKit Demo](http://img.youtube.com/vi/SpH9v4E3K4A/maxresdefault.jpg)](http://www.youtube.com/watch?v=SpH9v4E3K4A)
+[![Demo](http://img.youtube.com/vi/SpH9v4E3K4A/maxresdefault.jpg)](http://www.youtube.com/watch?v=SpH9v4E3K4A)
